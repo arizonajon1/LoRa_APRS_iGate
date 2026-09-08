@@ -21,6 +21,7 @@
 
 
 #include <Arduino.h>
+#include <vector>
 
 
 struct LastHeardStation {
@@ -30,6 +31,7 @@ struct LastHeardStation {
 
 namespace STATION_Utils {
 
+    std::vector<String> loadCallsignList(const String& list);
     void loadBlacklistAndManagers();
     bool isBlacklisted(const String& callsign);
     bool isManager(const String& callsign);

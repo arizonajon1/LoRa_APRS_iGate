@@ -210,6 +210,7 @@ namespace WEB_Utils {
         Config.personalNote                 = getParamStringSafe("personalNote", Config.personalNote);
 
         Config.blacklist                    = getParamStringSafe("blacklist", Config.blacklist);
+        Config.rxtWhitelist                 = getParamStringSafe("rxtWhitelist", Config.rxtWhitelist);
 
         Config.digi.mode                    = getParamIntSafe("digi.mode", Config.digi.mode);
         Config.digi.ecoMode                 = getParamIntSafe("digi.ecoMode", Config.digi.ecoMode);

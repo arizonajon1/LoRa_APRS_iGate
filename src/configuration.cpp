@@ -89,6 +89,8 @@ bool Configuration::writeFile() {
 
         data["blacklist"]                           = blacklist;
 
+        data["rxtWhitelist"]                        = rxtWhitelist;
+
         data["digi"]["mode"]                        = digi.mode;
         data["digi"]["ecoMode"]                     = digi.ecoMode;
         if (digi.ecoMode == 1) data["aprs_is"]["active"] = false;
@@ -280,6 +282,9 @@ bool Configuration::readFile() {
 
         if (data["blacklist"].isNull()) needsRewrite = true;
         blacklist                       = data["blacklist"] | "station callsign";
+
+        if (data["rxtWhitelist"].isNull()) needsRewrite = true;
+        rxtWhitelist                    = data["rxtWhitelist"] | "";
 
         if (data["digi"]["mode"].isNull() ||
             data["digi"]["ecoMode"].isNull() ||
@@ -492,6 +497,8 @@ void Configuration::setDefaultValues() {
     personalNote                    = "";
 
     blacklist                       = "";
+
+    rxtWhitelist                    = "";
 
     digi.mode                       = 0;
     digi.ecoMode                    = 0;

@@ -115,6 +115,7 @@ void setup() {
     Utils::validateFreqs();
     GPS_Utils::setup();
     STATION_Utils::loadBlacklistAndManagers();
+    LoRa_Utils::loadRxtWhitelist();
     Utils::startupDelay();
     SLEEP_Utils::setup();
     WIFI_Utils::setup();

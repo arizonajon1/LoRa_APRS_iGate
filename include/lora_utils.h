@@ -38,6 +38,7 @@ struct RxtHopMetric {
                             // (e.g. SF12, ~2000-3000 ms packet frames) can't overflow
     };
     void    setup();
+    void    loadRxtWhitelist();
     void    sendNewPacket(const String& newPacket);
     String  receivePacketFromSleep();
     String  receivePacket();
