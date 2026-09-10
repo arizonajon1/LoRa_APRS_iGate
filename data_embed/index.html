@@ -852,7 +852,7 @@ body{background:var(--msh-bg);color:var(--msh-text);font-family:"Inter",system-u
                                     APRS-IS
                                 </h5>
                                 <small
-                                    >Enter you APRS-IS server and
+                                    >Enter your APRS-IS server and
                                     credentials.</small
                                 >
                             </div>
@@ -1114,6 +1114,21 @@ body{background:var(--msh-bg);color:var(--msh-text);font-family:"Inter",system-u
                                         >
                                     </div>
                                 </div>
+                                <div class="col-12 mt-3">
+                                    <label
+                                        for="rxtWhitelist"
+                                        class="form-label"
+                                        >RXT Whitelist <small>(callsigns of RXT-capable digis, space separated -- no recompile needed to add a new one)</small></label
+                                    >
+                                    <input
+                                        type="text"
+                                        name="rxtWhitelist"
+                                        id="rxtWhitelist"
+                                        class="form-control"
+                                        placeholder="TSRXAX TSRXBX SOMTNX"
+                                        oninput="this.value = this.value.toUpperCase();"
+                                    />
+                                </div>
                             </div>
                         </div>
 
@@ -1154,21 +1169,6 @@ body{background:var(--msh-bg);color:var(--msh-text);font-family:"Inter",system-u
                                             id="blacklist"
                                             class="form-control"
                                             placeholder="Station Callsign"
-                                            oninput="this.value = this.value.toUpperCase();"
-                                        />
-                                    </div>
-                                    <div class="col-12 mt-3">
-                                        <label
-                                            for="rxtWhitelist"
-                                            class="form-label"
-                                            >RXT Whitelist <small>(callsigns of RXT-capable digis, space separated -- no recompile needed to add a new one)</small></label
-                                        >
-                                        <input
-                                            type="text"
-                                            name="rxtWhitelist"
-                                            id="rxtWhitelist"
-                                            class="form-control"
-                                            placeholder="TSRXAX TSRXBX SOMTNX"
                                             oninput="this.value = this.value.toUpperCase();"
                                         />
                                     </div>
